@@ -22,7 +22,7 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                toast('user created Successfully')
+                toast.success('user created Successfully')
                 const userInfo = {
                     displayName: data.name
                 }
@@ -65,9 +65,9 @@ const SignUp = () => {
                 </div>
 
 
-                <div className='h-[550px] rounded-2xl bg-gray-800 text-white flex justify-center items-center'>
+                <div className='h-[550px] rounded-2xl bg-gray-800 flex justify-center items-center'>
                     <div className='w-96 p-7'>
-                        <h1 className='text-xl text-center'>Sign Up</h1>
+                        <h1 className='text-xl text-center text-white '>Sign Up</h1>
                         <form onSubmit={handleSubmit(handleSingUp)}>
                             <div className="form-control w-full max-w-xs">
                                 <label className="label">
@@ -102,10 +102,10 @@ const SignUp = () => {
                             <input className='btn w-full bg-lime-600 mt-4' value='Sign Up' type="submit" />
                             {signUpError && <p className='text-red-600'>{signUpError}</p>}
                         </form>
-                        <p>Already Have an Account<Link className='text-lime-600' to="/login">Please Login</Link></p>
+                        <p className='text-white '>Already Have an Account<Link className='text-lime-600' to="/login">Please Login</Link></p>
                         <div className="flex items-center pt-4 space-x-1">
                             <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-                            <p className="px-3 text-sm dark:text-gray-400">Login with social accounts</p>
+                            <p className="px-3 text-sm text-white  ">Login with social accounts</p>
                             <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
                         </div>
                         <div className="flex justify-center space-x-4">

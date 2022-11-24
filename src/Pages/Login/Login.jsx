@@ -58,9 +58,9 @@ const Login = () => {
                     <img className='w-3/4' src={img} alt="" />
                 </div>
 
-                <div className='h-[500px] flex justify-center items-center rounded-2xl bg-gray-800 text-white'>
+                <div className='h-[500px] flex justify-center items-center rounded-2xl bg-gray-800 '>
                     <div className='w-96 p-7'>
-                        <h1 className='text-xl text-center'>Login</h1>
+                        <h1 className='text-xl text-center text-white'>Login</h1>
                         <form onSubmit={handleSubmit(handleLogin)} >
 
                             <div className="form-control w-full max-w-xs">
@@ -91,10 +91,10 @@ const Login = () => {
                                 {loginError && <p className='text-red-600'>{loginError}</p>}
                             </div>
                         </form>
-                        <p>New to Doctors Portal <Link className='text-lime-600' to="/signUp">Create new Account</Link></p>
+                        <p className='text-white'>New to Doctors Portal <Link className='text-lime-600' to="/signUp">Create new Account</Link></p>
                         <div className="flex items-center pt-4 space-x-1">
                             <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-                            <p className="px-3 text-sm dark:text-gray-400">Login with social accounts</p>
+                            <p className="px-3 text-sm text-white">Login with social accounts</p>
                             <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
                         </div>
                         <div className="flex justify-center space-x-4">

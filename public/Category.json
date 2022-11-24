@@ -1,0 +1,83 @@
+[
+    {
+        "brand": "HP",
+        "img": "https://i.bikroy-st.com/friday-offer-dell-inspiron-153000-i3-6th-gen-8-1000-for-sale-dhaka/cdbb9114-fe31-4085-af80-61f6da55edf8/620/466/fitted.jpg",
+        "name": "HP-Core i5-6Gen-14''",
+        "location": "Dhaka",
+        "resalePrice": "20k",
+        "originalPrice": "45k",
+        "uses": "4 Month"
+    },
+    {
+        "brand": "HP",
+        "img": "https://i.bikroy-st.com/probook-hp-core-i5-6gen-14fhd-ram4gb-500gb-laptop-for-sale-chattogram/6470e4b5-e147-4803-bcee-9d26d7d9ccc5/620/466/fitted.jpg",
+        "name": "Hp i3-6th-gen-8",
+        "location": "Chattogram",
+        "resalePrice": "21k",
+        "originalPrice": "42k",
+        "uses": "8 Month"
+    },
+    {
+        "brand": "HP",
+        "img": "https://i.bikroy-st.com/lenovo-core-i5-5th-gen-laptop-for-sale-dhaka-3/75fcfe0d-1bb3-487b-8842-2f3474a161ed/620/466/fitted.jpg",
+        "name": "Hp core-i5-5th-gen",
+        "location": "Cumilla",
+        "resalePrice": "23k",
+        "originalPrice": "44k",
+        "uses": "8 Month"
+    },
+    {
+        "brand": "DELL",
+        "img": "https://i.bikroy-st.com/dell-core-i-3-10th-gen-laptop-for-sale-mymensingh/c9ee7474-85ff-4f16-9019-93a6e884895a/620/466/fitted.jpg",
+        "name": "Dell core-i-3-10th-gen",
+        "location": "Khulna",
+        "resalePrice": "22k",
+        "originalPrice": "48k",
+        "uses": "9 Month"
+    },
+    {
+        "brand": "DELL",
+        "img": "https://i.bikroy-st.com/dell-latitude-e5470-core-i5-6th-gen-4gb-ram-500gb-hdd-14-hd-display-for-sale-barishal/21815db4-4452-48a0-9928-fb81727bb8c6/620/466/fitted.jpg",
+        "name": "Dell intel 10th-gen",
+        "location": "Dhaka",
+        "resalePrice": "22k",
+        "originalPrice": "44k",
+        "uses": "5 Month"
+    },
+    {
+        "brand": "DELL",
+        "img": "https://i.bikroy-st.com/open-box-hp-envy-15-x360-ryzen-55600u-ssd-256-8gb-for-sale-dhaka/878ed193-3cde-4085-8f11-d7067c05668e/620/466/fitted.jpg",
+        "name": "Dell intel 10th-gen",
+        "location": "Dhaka",
+        "resalePrice": "23k",
+        "originalPrice": "47k",
+        "uses": "4 Month"
+    },
+    {
+        "brand": "ACER",
+        "img": "https://i.bikroy-st.com/galaxy-book-pro-11th-gen-c-i7-super-amoled-ssd-1tb-16gb-ram-for-sale-dhaka-3/99e584c5-d198-4812-abf9-7fbfb44af7ff/620/466/fitted.jpg",
+        "name": "ACER intel 11th-gen-c-i7",
+        "location": "Dhaka MirPur",
+        "resalePrice": "22k",
+        "originalPrice": "40k",
+        "uses": "6 Month"
+    },
+    {
+        "brand": "ACER",
+        "img": "https://i.bikroy-st.com/blue-colur-hp-pavilion-1511th-gen-c-i5-touch-nvme-ssd-512-8gb-ram-for-sale-dhaka-1/6d1a9408-fb98-49a8-a13d-6e58e92280aa/620/466/fitted.jpg",
+        "name": "ACER intel 1511th-gen-c-i5",
+        "location": "Cumilla",
+        "resalePrice": "21k",
+        "originalPrice": "43k",
+        "uses": "7 Month"
+    },
+    {
+        "brand": "ACER",
+        "img": "https://i.bikroy-st.com/dell-latitude-e5470-core-i5-6th-gen-4gb-ram-500gb-hdd-14-hd-display-for-sale-barishal/21815db4-4452-48a0-9928-fb81727bb8c6/620/466/fitted.jpg",
+        "name": "ACER intel core-i5-6th-gen",
+        "location": "Dhaka",
+        "resalePrice": "20k",
+        "originalPrice": "49k",
+        "uses": "12 Month"
+    }
+]

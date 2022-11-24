@@ -3,7 +3,7 @@ import contact from '../../../assets/76882-contact-us.gif'
 
 const ContactUs = () => {
     return (
-        <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 bg-gray-800 text-white mb-16">
+        <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32  bg-gray-800 text-white mb-16">
             <div className="flex flex-col justify-between">
                 <div className="space-y-2">
                     <h2 className="text-4xl pt-2 pb-4 font-bold leading-tight lg:text-5xl">Contact Us</h2>

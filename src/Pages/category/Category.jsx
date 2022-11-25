@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Category = ({ product, setCategory }) => {
-    const { img, name, location, resalePrice, originalPrice, uses } = product;
+    const { img, name, location, resalePrice, originalPrice, uses, date } = product;
     return (
         <div className="card w-96 mx-auto bg-gray-800  text-gray-50 shadow-2xl">
             <figure><img src={img} alt="" /></figure>
@@ -11,6 +11,7 @@ const Category = ({ product, setCategory }) => {
                 <p>Resale Price: {resalePrice}</p>
                 <p>Original Price: {originalPrice}</p>
                 <p>Used: {uses}</p>
+                <p>Date: {date}</p>
                 <div className="card-actions justify-end">
                     <label
                         htmlFor="booking-modal"

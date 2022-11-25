@@ -13,4 +13,12 @@
 07.Resources & Credits: Tailwind Components -> https://daisyui.com/
 
 08.Toast: https://react-hot-toast.com/
+
 09.React hook form: https://react-hook-form.com/
+
+10. React Query: https://tanstack.com/query/v4/?from=reactQueryV3&original=https://react-query-v3.tanstack.com/
+
+
+adminEmail: <your admin email>
+
+adminPassword: <your admin password>

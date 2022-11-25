@@ -1,14 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import Loading from '../Loading/Loading';
 import BookingModal from './BookingModal/BookingModal';
 import Category from './Category';
 
 const AllCategory = () => {
     const location = useLocation();
     const [products, setProduct] = useState([]);
-    const [loading, setLoading] = useState(true);
     const [category, setCategory] = useState(null);
 
     useEffect(() => {
@@ -18,7 +16,6 @@ const AllCategory = () => {
                     if (res.data) {
                         setProduct(res.data)
                         console.log(res.data)
-                        setLoading(false)
                     }
                 })
                 .catch(error => {
@@ -27,9 +24,7 @@ const AllCategory = () => {
         }
     }, [location, products]);
 
-    if (loading) {
-        return <div className=' '><Loading></Loading></div>
-    }
+
 
     return (
         <>

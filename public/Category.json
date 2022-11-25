@@ -6,7 +6,8 @@
         "location": "Dhaka",
         "resalePrice": "20k",
         "originalPrice": "45k",
-        "uses": "4 Month"
+        "uses": "4 Month",
+        "date": "04-March"
     },
     {
         "brand": "HP",
@@ -15,7 +16,8 @@
         "location": "Chattogram",
         "resalePrice": "21k",
         "originalPrice": "42k",
-        "uses": "8 Month"
+        "uses": "8 Month",
+        "date": "09-March"
     },
     {
         "brand": "HP",
@@ -24,7 +26,8 @@
         "location": "Cumilla",
         "resalePrice": "23k",
         "originalPrice": "44k",
-        "uses": "8 Month"
+        "uses": "8 Month",
+        "date": "04-april"
     },
     {
         "brand": "DELL",
@@ -33,7 +36,8 @@
         "location": "Khulna",
         "resalePrice": "22k",
         "originalPrice": "48k",
-        "uses": "9 Month"
+        "uses": "9 Month",
+        "date": "04-Jun"
     },
     {
         "brand": "DELL",
@@ -42,7 +46,8 @@
         "location": "Dhaka",
         "resalePrice": "22k",
         "originalPrice": "44k",
-        "uses": "5 Month"
+        "uses": "5 Month",
+        "date": "10-July"
     },
     {
         "brand": "DELL",
@@ -51,7 +56,8 @@
         "location": "Dhaka",
         "resalePrice": "23k",
         "originalPrice": "47k",
-        "uses": "4 Month"
+        "uses": "4 Month",
+        "date": "08-March"
     },
     {
         "brand": "ACER",
@@ -60,7 +66,8 @@
         "location": "Dhaka MirPur",
         "resalePrice": "22k",
         "originalPrice": "40k",
-        "uses": "6 Month"
+        "uses": "6 Month",
+        "date": "12-Jan"
     },
     {
         "brand": "ACER",
@@ -69,7 +76,8 @@
         "location": "Cumilla",
         "resalePrice": "21k",
         "originalPrice": "43k",
-        "uses": "7 Month"
+        "uses": "7 Month",
+        "date": "04-May"
     },
     {
         "brand": "ACER",
@@ -78,6 +86,7 @@
         "location": "Dhaka",
         "resalePrice": "20k",
         "originalPrice": "49k",
-        "uses": "12 Month"
+        "uses": "12 Month",
+        "date": "14-May"
     }
 ]

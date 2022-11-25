@@ -9,12 +9,12 @@ const CardInfos = () => {
             brand: "HP"
         },
         {
-            img: 'https://aroz.com.bd/wp-content/uploads/2021/12/3-500x500-1.jpg',
-            brand: 'DELL'
+            img: "https://aroz.com.bd/wp-content/uploads/2021/12/3-500x500-1.jpg",
+            brand: "DELL"
         },
         {
             img: 'https://www.bdstall.com/asset/product-image/giant_12526.jpg',
-            brand: 'ACER'
+            brand: "ACER"
         },
     ]
 

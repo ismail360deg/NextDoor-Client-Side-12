@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Category = ({ product }) => {
+const Category = ({ product, setCategory }) => {
     const { img, name, location, resalePrice, originalPrice, uses } = product;
     return (
         <div className="card w-96 mx-auto bg-gray-800  text-gray-50 shadow-2xl">
@@ -13,7 +12,11 @@ const Category = ({ product }) => {
                 <p>Original Price: {originalPrice}</p>
                 <p>Used: {uses}</p>
                 <div className="card-actions justify-end">
-                    <Link className="btn bg-lime-600">Purchase Now</Link>
+                    <label
+                        htmlFor="booking-modal"
+                        className="btn bg-lime-600"
+                        onClick={() => setCategory(product)}
+                    >Purchase Now</label>
                 </div>
             </div>
         </div>

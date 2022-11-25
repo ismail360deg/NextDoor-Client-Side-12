@@ -28,7 +28,7 @@ const SignUp = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        navigate('/')
+                        navigate('/');
                     })
                     .catch(err => console.error(err));
 

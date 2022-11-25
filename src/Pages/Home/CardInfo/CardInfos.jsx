@@ -1,3 +1,4 @@
+import { async } from '@firebase/util';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import CardInfo from './CardInfo';
@@ -5,8 +6,11 @@ import CardInfo from './CardInfo';
 const CardInfos = () => {
     const { data: products = [] } = useQuery({
         queryKey: ['cardInfo'],
-        queryFn: () => fetch('http://localhost:5000/cardInfo')
-            .then(res => res.json())
+        queryFn: async () => {
+            const res = await fetch('http://localhost:5000/cardInfo');
+            const data = await res.json();
+            return data
+        }
     })
 
     return (

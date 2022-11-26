@@ -1,10 +1,10 @@
-import { async } from '@firebase/util';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import Loading from '../../Loading/Loading';
 import CardInfo from './CardInfo';
 
 const CardInfos = () => {
-    const { data: products = [] } = useQuery({
+    const { data: products, isLoading = [] } = useQuery({
         queryKey: ['cardInfo'],
         queryFn: async () => {
             const res = await fetch('http://localhost:5000/cardInfo');
@@ -12,6 +12,10 @@ const CardInfos = () => {
             return data
         }
     })
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
 
     return (
         <div className='grid mt-8 gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-16 mx-auto'>

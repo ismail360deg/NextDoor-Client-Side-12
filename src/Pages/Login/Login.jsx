@@ -47,7 +47,6 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 toast.success('Login successful!', { autoClose: 500 })
-
                 if (user) {
                     navigate(from, { replace: true })
                 }

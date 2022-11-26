@@ -117,10 +117,33 @@ const SignUp = () => {
                                 <input type="password" className="input input-bordered w-full max-w-xs" {...register("password", {
                                     required: "Password is required",
                                     minLength: { value: 6, message: 'Password must be 6 characters or longer' },
-                                    pattern: { value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/, message: 'Password must have uppercase, number and special characters' }
+
                                 })} />
                                 {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
                             </div>
+
+                            {/* pattern: { value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/, message: 'Password must have uppercase, number and special characters' } */}
+
+                            {/* <div className="form-control">
+                                <label className="label cursor-pointer">
+                                    <span className="label-text text-white text-sm">Seller</span>
+                                    <input {...register("radio", {
+                                        required: "Checked value required"
+                                    })}
+                                        type="radio" name="radio-10" className="radio text-white checked:bg-lime-600" checked />
+                                </label>
+                            </div>
+
+                            <div className="form-control">
+                                <label className="label cursor-pointer">
+                                    <span className="label-text text-white text-sm">User</span>
+                                    <input {...register("radio", {
+                                        required: "Checked value required"
+                                    })}
+                                        type="radio" name="radio-10" className="radio text-white checked:bg-lime-600" checked />
+                                </label>
+                            </div> */}
+
 
                             <input className='btn w-full bg-lime-600 mt-4' value='Sign Up' type="submit" />
                             {signUpError && <p className='text-red-600'>{signUpError}</p>}

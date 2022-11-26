@@ -42,7 +42,7 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders && orders.map((order, i) => <tr key={order._id}>
+                            orders?.length && orders.map((order, i) => <tr key={order._id}>
                                 <th>{i + 1}</th>
                                 <td>{order.ProductName}</td>
                                 <td>{order.price}</td>

@@ -5,6 +5,7 @@ import { AuthContext } from '../../contexts/AuthProvider';
 import toast from 'react-hot-toast';
 import img from '../../assets/login.gif';
 import { GoogleAuthProvider } from 'firebase/auth';
+import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -12,8 +13,12 @@ const SignUp = () => {
     const [signUpError, setSignUpError] = useState('')
     const navigate = useNavigate();
     const location = useLocation();
-    // const [createdUserEmail, setCreatedUserEmail] = useState('');
+    const [createdUserEmail, setCreatedUserEmail] = useState('');
+    const [token] = useToken(createdUserEmail);
 
+    if (token) {
+        navigate('/');
+    }
     const from = location.state?.from?.pathname || '/';
 
     const handleSingUp = data => {
@@ -50,6 +55,7 @@ const SignUp = () => {
                 console.log(user);
                 if (user) {
                     navigate(from, { replace: true })
+
                 }
             })
             .catch(error => console.error(error))
@@ -67,8 +73,7 @@ const SignUp = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                navigate('/');
-                // setCreatedUserEmail(email);
+                setCreatedUserEmail(email);
             })
     }
 

@@ -15,7 +15,6 @@ const AllCategory = () => {
                 .then(res => {
                     if (res.data) {
                         setProduct(res.data)
-                        console.log(res.data)
                     }
                 })
                 .catch(error => {

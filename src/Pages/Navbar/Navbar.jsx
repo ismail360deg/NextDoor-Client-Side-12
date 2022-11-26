@@ -13,7 +13,6 @@ const Navbar = () => {
 
     const menuItems = <>
         <li className=''><Link to='/'>Home</Link></li>
-        <li><Link to='/appointment'>Appointment</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
 
         {user?.uid ?

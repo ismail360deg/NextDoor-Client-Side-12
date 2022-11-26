@@ -35,7 +35,7 @@ const BookingModal = ({ category, setCategory }) => {
                 console.log(data);
                 if (data.acknowledged) {
                     setCategory(null);
-                    toast.success('Booking Confirmed');
+                    toast.success('Purchase Confirmed');
                 }
 
             })

@@ -19,6 +19,6 @@
 10. React Query: https://tanstack.com/query/v4/?from=reactQueryV3&original=https://react-query-v3.tanstack.com/
 
 
-adminEmail: <your admin email>
+adminEmail: ema@fg.com
 
-adminPassword: <your admin password>
+adminPassword: 123456

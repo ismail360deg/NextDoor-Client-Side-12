@@ -4,18 +4,16 @@ import Main from '../../Layout/Main';
 import Blog from "../../Pages/Blog/Blog";
 import AllCategory from "../../Pages/category/AllCategory";
 import AddProduct from "../../Pages/Dashboard/AddProduct";
-import AllBuyer from "../../Pages/Dashboard/AllBuyer";
 import AllSellers from "../../Pages/Dashboard/AllSellers";
-import Dashboard from "../../Pages/Dashboard/Dashboard";
-import MyOrders from "../../Pages/Dashboard/MyOrders";
+import MyOrders from "../../Pages/Dashboard/AllBuyers";
 import MyProducts from "../../Pages/Dashboard/MyProducts";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
-import ContactUs from "../../Pages/Home/ContactUs/ContactUs";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import AllBuyers from "../../Pages/Dashboard/AllBuyers";
 
 export const router = createBrowserRouter([
     {
@@ -52,15 +50,11 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/dashboard',
-                element: <MyOrders></MyOrders>
+                element: <AllBuyers></AllBuyers>
             },
             {
                 path: '/dashboard/allSellers',
                 element: <AdminRoute><AllSellers></AllSellers></AdminRoute>
-            },
-            {
-                path: '/dashboard/allBuyer',
-                element: <AllBuyer></AllBuyer>
             },
             {
                 path: '/dashboard/addProduct',

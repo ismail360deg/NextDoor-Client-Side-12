@@ -12,7 +12,7 @@ const ConfirmationModal = ({ title, message, closeModal, modalData, successActio
                         <label
                             onClick={() => successAction(modalData)}
                             htmlFor="confirmation-modal"
-                            className="btn btn-primary">{successButtonName}</label>
+                            className="btn bg-red-600 border-none">{successButtonName}</label>
                         <button onClick={closeModal} className='btn btn-outline'>cancel</button>
                     </div>
                 </div>

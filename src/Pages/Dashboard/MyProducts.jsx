@@ -6,10 +6,10 @@ import ConfirmationModal from './ConfirmationModal/ConfirmationModal';
 
 const MyProducts = () => {
 
-    const [deletingDoctor, setDeletingDoctor] = useState(null);
+    const [deletingProduct, setDeletingProduct] = useState(null);
 
     const closeModal = () => {
-        setDeletingDoctor(null);
+        setDeletingProduct(null);
     }
 
 
@@ -31,7 +31,7 @@ const MyProducts = () => {
         }
     });
 
-    const handleDeleteDoctor = product => {
+    const handleDeleteProduct = product => {
         fetch(`http://localhost:5000/myProducts/${product._id}`, {
             method: 'DELETE',
             headers: {
@@ -58,7 +58,7 @@ const MyProducts = () => {
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
-                        <tr>
+                        <tr className=''>
                             <th></th>
                             <th>Image</th>
                             <th>Name</th>
@@ -85,7 +85,7 @@ const MyProducts = () => {
                                 <td>{product.number}</td>
                                 <td>{product.location}</td>
                                 <td>
-                                    <label onClick={() => setDeletingDoctor(product)} htmlFor="confirmation-modal" className="btn btn-sm btn-error">Delete</label>
+                                    <label onClick={() => setDeletingProduct(product)} htmlFor="confirmation-modal" className="btn btn-sm bg-red-600 border-none">Delete</label>
                                 </td>
                                 <td>
                                     <button className="btn btn-sm border-none bg-lime-600">Advertised</button>
@@ -96,12 +96,12 @@ const MyProducts = () => {
                 </table>
             </div>
             {
-                deletingDoctor && <ConfirmationModal
+                deletingProduct && <ConfirmationModal
                     title={`Are you sure you want to delete?`}
-                    message={`If you delete ${deletingDoctor.name}. It cannot be undone.`}
-                    successAction={handleDeleteDoctor}
+                    message={`If you delete ${deletingProduct.name}. It cannot be undone.`}
+                    successAction={handleDeleteProduct}
                     successButtonName="Delete"
-                    modalData={deletingDoctor}
+                    modalData={deletingProduct}
                     closeModal={closeModal}
                 >
                 </ConfirmationModal>

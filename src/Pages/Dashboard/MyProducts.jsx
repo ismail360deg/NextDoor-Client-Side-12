@@ -12,7 +12,6 @@ const MyProducts = () => {
         setDeletingProduct(null);
     }
 
-
     const { data: myProducts, isLoading, refetch } = useQuery({
         queryKey: ['myProducts'],
         queryFn: async () => {

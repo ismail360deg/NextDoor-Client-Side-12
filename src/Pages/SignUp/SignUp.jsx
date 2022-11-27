@@ -54,7 +54,18 @@ const SignUp = () => {
                 toast.success('Login successful!', { autoClose: 500 })
                 console.log(user);
                 if (user) {
-                    navigate(from, { replace: true })
+                    fetch('http://localhost:5000/users', {
+                        method: 'POST',
+                        headers: {
+                            'content-type': 'application/json'
+                        },
+                        body: JSON.stringify({ name: user.displayName, email: user.email })
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data)
+                            setCreatedUserEmail(user.email);
+                        })
 
                 }
             })

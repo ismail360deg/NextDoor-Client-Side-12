@@ -10,7 +10,7 @@ const ContactUs = () => {
                 </div>
                 <img src={contact} alt="" className='w-3/4' />
             </div>
-            <form novalidate="" className="space-y-6 ng-untouched ng-pristine ng-valid">
+            <form noValidate="" className="space-y-6 ng-untouched ng-pristine ng-valid">
                 <div>
                     <label for="name" className="text-sm">Full name</label>
                     <input id="name" type="text" placeholder="Enter Your Full Name" className="w-full p-3 rounded bg-gray-100" />

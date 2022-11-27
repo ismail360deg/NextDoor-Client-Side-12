@@ -99,12 +99,6 @@ const AddProduct = () => {
                         <option>Good</option>
                         <option>Excellent</option>
                         <option>Fair</option>
-                        {/* {
-                            specialties.map(specialty => <option
-                                key={specialty._id}
-                                value={specialty.name}
-                            >{specialty.name}</option>)
-                        } */}
                     </select>
                 </div>
 

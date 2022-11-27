@@ -21,7 +21,7 @@ const BookingModal = ({ category, setCategory }) => {
             Name: name,
             email,
             phone,
-            location
+            location,
         }
         fetch('http://localhost:5000/products', {
             method: 'POST',

@@ -4,6 +4,7 @@ import { AuthContext } from '../../contexts/AuthProvider';
 import Loading from '../Loading/Loading';
 import toast from 'react-hot-toast';
 import ConfirmationModal from './ConfirmationModal/ConfirmationModal';
+import { Link } from 'react-router-dom';
 
 const AllBuyers = () => {
     const { user } = useContext(AuthContext);
@@ -74,7 +75,18 @@ const AllBuyers = () => {
                                 <td>{order.price}</td>
                                 <td>{order.phone}</td>
                                 <td>{order.location}</td>
-                                <td><button className='btn bg-lime-600 border-none'>Pay</button></td>
+                                <td>
+                                    {
+                                        order.price && !order.paid &&
+                                        <Link to={`/dashboard/payment/${order._id}`}>
+                                            <button className='btn bg-lime-600 border-none'>Pay</button>
+                                        </Link>
+                                    }
+                                    {
+                                        order.price && order.paid && <span className='text-green-500'
+                                        >Paid</span>
+                                    }
+                                </td>
                                 <td>
                                     <label onClick={() => setDeletingOrder(order)}
                                         htmlFor="confirmation-modal" className='btn bg-red-600 border-none'>Delete </label>

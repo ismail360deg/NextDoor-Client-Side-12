@@ -6,7 +6,7 @@ import toast from 'react-hot-toast';
 import ConfirmationModal from './ConfirmationModal/ConfirmationModal';
 import { Link } from 'react-router-dom';
 
-const AllBuyers = () => {
+const AllOrders = () => {
     const { user } = useContext(AuthContext);
 
     const [deletingOrder, setDeletingOrder] = useState(null);
@@ -103,6 +103,6 @@ const AllBuyers = () => {
     );
 };
 
-export default AllBuyers;
+export default AllOrders;
 
 

@@ -5,7 +5,6 @@ import Blog from "../../Pages/Blog/Blog";
 import AllCategory from "../../Pages/category/AllCategory";
 import AddProduct from "../../Pages/Dashboard/AddProduct";
 import AllSellers from "../../Pages/Dashboard/AllSellers";
-import MyOrders from "../../Pages/Dashboard/AllBuyers";
 import MyProducts from "../../Pages/Dashboard/MyProducts";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 import Home from "../../Pages/Home/Home";
@@ -13,9 +12,8 @@ import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
-import AllBuyers from "../../Pages/Dashboard/AllBuyers";
 import Payment from "../../Pages/Dashboard/Payment/Payment";
-import Wishlist from "../../Pages/Wishlist/Wishlist";
+import AllOrders from "../../Pages/Dashboard/AllOrders";
 
 export const router = createBrowserRouter([
     {
@@ -40,10 +38,6 @@ export const router = createBrowserRouter([
                 element: <Blog></Blog>
             },
             {
-                path: '/wishlist',
-                element: <Wishlist></Wishlist>
-            },
-            {
                 path: '/categories',
                 element: <PrivateRoute><AllCategory></AllCategory></PrivateRoute>
             }
@@ -57,7 +51,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/dashboard',
-                element: <AllBuyers></AllBuyers>
+                element: <AllOrders></AllOrders>
             },
             {
                 path: '/dashboard/allSellers',

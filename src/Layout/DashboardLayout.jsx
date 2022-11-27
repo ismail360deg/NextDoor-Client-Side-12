@@ -19,7 +19,7 @@ const DashboardLayout = () => {
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
                     <ul className="bg-white mt-4 p-4 w-80  text-base-content">
 
-                        <li><Link className='btn w-full mb-4 bg-lime-600 border-none' to='/dashboard'>All Buyer</Link></li>
+                        <li><Link className='btn w-full mb-4 bg-lime-600 border-none' to='/dashboard'>All Orders</Link></li>
                         {
                             isAdmin &&
                             <>

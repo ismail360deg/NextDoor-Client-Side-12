@@ -52,61 +52,48 @@ const MyProducts = () => {
     }
 
     return (
-        <div>
-            <h2 className="text-3xl">My Products: {myProducts?.length}</h2>
-            <div className="overflow-x-auto">
-                <table className="table w-full">
-                    <thead>
-                        <tr className=''>
-                            <th></th>
-                            <th>Image</th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Condition</th>
-                            <th>Number</th>
-                            <th>Location</th>
-                            <th>Action</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            myProducts.map((product, i) => <tr key={product._id}>
-                                <th>{i + 1}</th>
-                                <td><div className="avatar">
-                                    <div className="w-24 rounded-full">
-                                        <img src={product.image} alt="" />
+        <section className="bg-gray-100 text-gray-800 ">
+            <h3 className="text-3xl p-6">My Products: {myProducts?.length}</h3>
+            <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+                <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
+                    {
+                        myProducts.map((product, i) => <p key={product._id}>
+                            <div className="max-w-sm mx-auto bg-gray-50 h-[500px] shadow-2xl rounded-2xl">
+                                <div className="p-6 space-y-2">
+                                    <figure><img className='rounded-2xl' src={product.image} alt="" /></figure>
+                                    <h3 className="text-2xl font-semibold ">Name: {product.name}</h3>
+                                    <p>Price: {product.price}</p>
+                                    <p>Condition: {product.condition}</p>
+                                    <p>Number: {product.number}</p>
+                                    <p>Location: {product.location}</p>
+
+                                    <div className='flex mt-4'>
+                                        <label onClick={() => setDeletingProduct(product)} htmlFor="confirmation-modal" className="btn btn-sm bg-red-600 border-none">Delete</label>
+                                        <p>
+                                            <button className="btn btn-sm border-none bg-lime-600 ml-4">Advertised</button>
+                                        </p>
                                     </div>
-                                </div></td>
-                                <td>{product.name}</td>
-                                <td>{product.price}</td>
-                                <td>{product.condition}</td>
-                                <td>{product.number}</td>
-                                <td>{product.location}</td>
-                                <td>
-                                    <label onClick={() => setDeletingProduct(product)} htmlFor="confirmation-modal" className="btn btn-sm bg-red-600 border-none">Delete</label>
-                                </td>
-                                <td>
-                                    <button className="btn btn-sm border-none bg-lime-600">Advertised</button>
-                                </td>
-                            </tr>)
-                        }
-                    </tbody>
-                </table>
+                                </div>
+                            </div>
+                        </p>)
+                    }
+
+                </div>
+                {
+                    deletingProduct && <ConfirmationModal
+                        title={`Are you sure you want to delete?`}
+                        message={`If you delete ${deletingProduct.name}. It cannot be undone.`}
+                        successAction={handleDeleteProduct}
+                        successButtonName="Delete"
+                        modalData={deletingProduct}
+                        closeModal={closeModal}
+                    >
+                    </ConfirmationModal>
+                }
             </div>
-            {
-                deletingProduct && <ConfirmationModal
-                    title={`Are you sure you want to delete?`}
-                    message={`If you delete ${deletingProduct.name}. It cannot be undone.`}
-                    successAction={handleDeleteProduct}
-                    successButtonName="Delete"
-                    modalData={deletingProduct}
-                    closeModal={closeModal}
-                >
-                </ConfirmationModal>
-            }
-        </div>
+        </section >
     );
 };
 
 export default MyProducts;
+

@@ -15,6 +15,7 @@ import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AllBuyers from "../../Pages/Dashboard/AllBuyers";
 import Payment from "../../Pages/Dashboard/Payment/Payment";
+import Wishlist from "../../Pages/Wishlist/Wishlist";
 
 export const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/wishlist',
+                element: <Wishlist></Wishlist>
             },
             {
                 path: '/categories',

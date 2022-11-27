@@ -52,63 +52,57 @@ const AllBuyers = () => {
     }
 
     return (
-        <div>
-            <h3 className="text-3xl mb-5">My Appointments</h3>
-            <div className="overflow-x-auto">
-                <table className="table w-full">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Number</th>
-                            <th>Location</th>
-                            <th>Payment</th>
-                            <th>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            orders?.length && orders.map((order, i) => <tr key={order._id}>
-                                <th>{i + 1}</th>
-                                <td>{order.ProductName}</td>
-                                <td>{order.price}</td>
-                                <td>{order.phone}</td>
-                                <td>{order.location}</td>
-                                <td>
-                                    {
-                                        order.price && !order.paid &&
-                                        <Link to={`/dashboard/payment/${order._id}`}>
-                                            <button className='btn bg-lime-600 border-none'>Pay</button>
-                                        </Link>
-                                    }
-                                    {
-                                        order.price && order.paid && <span className='text-green-500'
-                                        >Paid</span>
-                                    }
-                                </td>
-                                <td>
-                                    <label onClick={() => setDeletingOrder(order)}
-                                        htmlFor="confirmation-modal" className='btn bg-red-600 border-none'>Delete </label>
-                                </td>
-                            </tr>)
-                        }
-                    </tbody>
-                </table>
+        <section className="bg-gray-100 text-gray-800 ">
+            <h3 className="text-3xl p-6">All Buyers</h3>
+            <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+                <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
+                    {
+                        orders?.length && orders.map((order, i) => <p key={order._id}>
+                            <div className="max-w-sm mx-auto bg-gray-50 h-[270px]  shadow-2xl rounded-2xl">
+                                <div className="p-6 space-y-2">
+                                    <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">{order.ProductName}</h3>
+                                    <p>Price: {order.price}</p>
+                                    <p>Number: {order.phone}</p>
+                                    <p>Location: {order.location}</p>
+                                    <div className='flex mt-4'>
+                                        {
+                                            order.price && !order.paid &&
+                                            <Link to={`/dashboard/payment/${order._id}`}>
+                                                <button className='btn bg-lime-600 border-none '>Pay</button>
+                                            </Link>
+                                        }
+                                        {
+                                            order.price && order.paid && <span className='btn bg-lime-600 border-none text-white'
+                                            >Paid</span>
+                                        }
+                                        <p>
+                                            <label onClick={() => setDeletingOrder(order)}
+                                                htmlFor="confirmation-modal" className='btn bg-red-600 border-none ml-4'>Delete </label>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </p>)
+                    }
+
+                </div>
+                {
+                    deletingOrder && <ConfirmationModal
+                        title={`Are you sure you want to delete?`}
+                        message={`If you delete ${deletingOrder.name}. It cannot be undone.`}
+                        successAction={handleDeleteOrder}
+                        successButtonName="Delete"
+                        modalData={deletingOrder}
+                        closeModal={closeModal}
+                    >
+                    </ConfirmationModal>
+                }
             </div>
-            {
-                deletingOrder && <ConfirmationModal
-                    title={`Are you sure you want to delete?`}
-                    message={`If you delete ${deletingOrder.name}. It cannot be undone.`}
-                    successAction={handleDeleteOrder}
-                    successButtonName="Delete"
-                    modalData={deletingOrder}
-                    closeModal={closeModal}
-                >
-                </ConfirmationModal>
-            }
-        </div>
+        </section>
+
     );
 };
 
 export default AllBuyers;
+
+

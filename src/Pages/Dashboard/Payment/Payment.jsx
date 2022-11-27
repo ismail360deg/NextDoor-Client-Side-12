@@ -10,7 +10,9 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PK);
 
 const Payment = () => {
     const orders = useLoaderData();
+
     const navigation = useNavigation();
+
     console.log(orders);
     const { ProductName, price } = orders;
     console.log(orders)
@@ -20,8 +22,8 @@ const Payment = () => {
 
     return (
         <div>
-            <h1 className='text-3xl mt-6'>Payment for {ProductName}</h1>
-            <p className="text-xl">Please pay <strong>${price}</strong> for your orders  </p>
+            <h1 className='text-3xl mt-6 ml-20'>Payment for {ProductName}</h1>
+            <p className="text-xl ml-20 mt-4">Please pay <strong>${price}</strong> for your orders  </p>
             <div className='w-96 my-6'>
                 <Elements stripe={stripePromise}>
                     <CheckoutForm

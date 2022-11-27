@@ -13,16 +13,6 @@ const AddProduct = () => {
 
     const navigate = useNavigate();
 
-    // const { data: specialties } = useQuery({
-    //     // , isLoading
-    //     queryKey: ['specialty'],
-    //     queryFn: async () => {
-    //         const res = await fetch('https://doctors-portal-server-six-wine.vercel.app/appointmentSpecialty');
-    //         const data = await res.json();
-    //         return data;
-    //     }
-    // })
-
     const handleAddDoctor = data => {
         const image = data.image[0];
         const formData = new FormData();
@@ -46,7 +36,6 @@ const AddProduct = () => {
                         image: imgData.data.url
                     }
 
-                    // save doctors information to the database
                     fetch('http://localhost:5000/myProducts', {
                         method: 'POST',
                         headers: {
@@ -71,8 +60,8 @@ const AddProduct = () => {
 
 
     return (
-        <div className='w-96 p-7'>
-            <h2 className="text-4xl">Add A Doctor</h2>
+        <div className='w-96 p-7 shadow-2xl rounded-2xl mx-auto mt-8 '>
+            <h2 className="text-4xl">Add A Product</h2>
             <form onSubmit={handleSubmit(handleAddDoctor)}>
 
                 <div className="form-control w-full max-w-xs">
@@ -80,7 +69,7 @@ const AddProduct = () => {
                     <input type="text" {...register("name", {
                         required: "Name is Required"
                     })} className="input input-bordered w-full max-w-xs" />
-                    {/* {errors.name && <p className='text-red-500'>{errors.name.message}</p>} */}
+                    {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
                 </div>
 
                 <div className="form-control w-full max-w-xs">
@@ -88,7 +77,7 @@ const AddProduct = () => {
                     <input type="text" {...register("price", {
                         required: "Price is Required"
                     })} className="input input-bordered w-full max-w-xs" />
-                    {/* {errors.email && <p className='text-red-500'>{errors.email.message}</p>} */}
+                    {errors.price && <p className='text-red-500'>{errors.price.message}</p>}
                 </div>
 
                 <div className="form-control w-full max-w-xs">
@@ -107,7 +96,7 @@ const AddProduct = () => {
                     <input type="text" {...register("number", {
                         required: "Name is Required"
                     })} className="input input-bordered w-full max-w-xs" />
-                    {/* {errors.name && <p className='text-red-500'>{errors.name.message}</p>} */}
+                    {errors.number && <p className='text-red-500'>{errors.number.message}</p>}
                 </div>
 
                 <div className="form-control w-full max-w-xs">
@@ -115,7 +104,7 @@ const AddProduct = () => {
                     <input type="text" {...register("location", {
                         required: true
                     })} className="input input-bordered w-full max-w-xs" />
-                    {/* {errors.email && <p className='text-red-500'>{errors.email.message}</p>} */}
+                    {errors.location && <p className='text-red-500'>{errors.location.message}</p>}
                 </div>
 
 
@@ -124,7 +113,7 @@ const AddProduct = () => {
                     <input type="file" {...register("image", {
                         required: "Photo is Required"
                     })} className="input input-bordered w-full max-w-xs" />
-                    {/* {errors.img && <p className='text-red-500'>{errors.img.message}</p>} */}
+                    {errors.image && <p className='text-red-500'>{errors.image.message}</p>}
                 </div>
 
                 <input className='btn border-none bg-lime-600 w-full mt-4' value="Add A Product" type="submit" />

@@ -15,6 +15,7 @@ const Navbar = () => {
         <li className=''><Link to='/'>Home</Link></li>
         <li className=''><Link to='/'>Advertised</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
+        <li><Link to='/wishlist'>Wishlist</Link></li>
 
         {user?.uid ?
             <>

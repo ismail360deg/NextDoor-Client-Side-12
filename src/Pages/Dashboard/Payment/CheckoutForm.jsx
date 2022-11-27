@@ -38,8 +38,6 @@ const CheckoutForm = ({ orders }) => {
         event.preventDefault();
 
         if (!stripe || !elements) {
-            // Stripe.js has not loaded yet. Make sure to disable
-            // form submission until Stripe.js has loaded.
             return;
         }
 
@@ -113,7 +111,7 @@ const CheckoutForm = ({ orders }) => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form className='shadow-2xl rounded-2xl ml-20 p-8' onSubmit={handleSubmit}>
                 <CardElement
                     options={{
                         style: {
@@ -131,16 +129,16 @@ const CheckoutForm = ({ orders }) => {
                     }}
                 />
                 <button
-                    className='btn btn-sm mt-6 btn-primary'
+                    className='btn btn-sm mt-6 border-none bg-lime-600 ml-20'
                     type="submit" disabled={!stripe || !clientSecret || processing}>
                     Pay
                 </button>
             </form>
-            <p className='text-red-500 '>{cardError}</p>
+            <p className='text-red-500 ml-20'>{cardError}</p>
             {
                 success && <div>
-                    <p className='text-green-500'>{success}</p>
-                    <p>Your transactionId: <span className='font-bold'>{transactionId}</span></p>
+                    <p className='text-green-500 ml-20'>{success}</p>
+                    <p className='ml-20'>Your transactionId: <span className='font-bold '>{transactionId}</span></p>
                 </div>
             }
         </>

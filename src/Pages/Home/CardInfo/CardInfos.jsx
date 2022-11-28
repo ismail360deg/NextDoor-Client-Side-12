@@ -7,7 +7,7 @@ const CardInfos = () => {
     const { data: products, isLoading = [] } = useQuery({
         queryKey: ['cardInfo'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/cardInfo');
+            const res = await fetch('https://next-door-client-server.vercel.app/cardInfo');
             const data = await res.json();
             return data
         }

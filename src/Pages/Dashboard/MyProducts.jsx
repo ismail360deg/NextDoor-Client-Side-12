@@ -16,7 +16,7 @@ const MyProducts = () => {
         queryKey: ['myProducts'],
         queryFn: async () => {
             try {
-                const res = await fetch('http://localhost:5000/myProducts', {
+                const res = await fetch('https://next-door-client-server.vercel.app/myProducts', {
                     headers: {
                         authorization: `bearer ${localStorage.getItem('accessToken')}`
                     }
@@ -31,7 +31,7 @@ const MyProducts = () => {
     });
 
     const handleDeleteProduct = product => {
-        fetch(`http://localhost:5000/myProducts/${product._id}`, {
+        fetch(`https://next-door-client-server.vercel.app/myProducts/${product._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

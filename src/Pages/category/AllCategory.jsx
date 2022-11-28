@@ -11,7 +11,7 @@ const AllCategory = () => {
 
     useEffect(() => {
         if (location?.search) {
-            axios.get(`http://localhost:5000/category${location?.search}`)
+            axios.get(`https://next-door-client-server.vercel.app/category${location?.search}`)
                 .then(res => {
                     if (res.data) {
                         setProduct(res.data)

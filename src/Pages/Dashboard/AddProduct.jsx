@@ -36,7 +36,7 @@ const AddProduct = () => {
                         image: imgData.data.url
                     }
 
-                    fetch('http://localhost:5000/myProducts', {
+                    fetch('https://next-door-client-server.vercel.app/myProducts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

@@ -15,7 +15,7 @@ const AllOrders = () => {
         setDeletingOrder(null);
     }
 
-    const url = `http://localhost:5000/orders?email=${user?.email}`;
+    const url = `https://next-door-client-server.vercel.app/orders?email=${user?.email}`;
 
     const { data: orders = [], isLoading, refetch } = useQuery({
         queryKey: ['orders', user?.email],
@@ -31,7 +31,7 @@ const AllOrders = () => {
     });
 
     const handleDeleteOrder = order => {
-        fetch(`http://localhost:5000/orders/${order._id}`, {
+        fetch(`https://next-door-client-server.vercel.app/orders/${order._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

@@ -60,15 +60,17 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/payment/:id',
                 element: <Payment></Payment>,
-                loader: ({ params }) => fetch(`http://localhost:5000/orders/${params.id}`)
+                loader: ({ params }) => fetch(`https://next-door-client-server.vercel.app/orders/${params.id}`)
             },
             {
                 path: '/dashboard/addProduct',
                 element: <AddProduct></AddProduct>
+                // addProduct
             },
             {
                 path: '/dashboard/myProducts',
                 element: <MyProducts></MyProducts>
+                // myProducts
             },
 
         ]

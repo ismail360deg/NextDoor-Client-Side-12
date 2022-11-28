@@ -23,7 +23,7 @@ const BookingModal = ({ category, setCategory }) => {
             phone,
             location,
         }
-        fetch('http://localhost:5000/products', {
+        fetch('https://next-door-client-server.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

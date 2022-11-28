@@ -19,12 +19,6 @@ const Category = ({ product, setCategory }) => {
                         onClick={() => setCategory(product)}
                     >Purchase Now</label>
                 </div>
-                <div className="card-actions justify-end">
-                    <label
-                        className="btn bg-lime-600"
-                        onClick={() => setCategory(product)}
-                    >Wishlist</label>
-                </div>
             </div>
         </div>
     );

@@ -48,7 +48,7 @@ const Login = () => {
                 const user = result.user;
                 toast.success('Login successful!', { autoClose: 500 })
                 if (user) {
-                    fetch('http://localhost:5000/users', {
+                    fetch('https://next-door-client-server.vercel.app/users', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

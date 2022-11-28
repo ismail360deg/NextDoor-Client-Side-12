@@ -20,12 +20,14 @@ const DashboardLayout = () => {
                     <ul className="bg-white mt-4 p-4 w-80  text-base-content">
 
                         <li><Link className='btn w-full mb-4 bg-lime-600 border-none' to='/dashboard'>All Orders</Link></li>
+                        <li><Link className='btn w-full mb-4 bg-lime-600 border-none' to='/dashboard/addProduct'>Add A Product</Link></li>
+                        <li><Link className='btn w-full mb-4 bg-lime-600 border-none' to='/dashboard/myProducts'>My Products</Link></li>
                         {
                             isAdmin &&
                             <>
                                 <li><Link className='btn bg-lime-600 w-full mb-4 border-none' to='/dashboard/allSellers'>All Sellers</Link></li>
-                                <li><Link className='btn w-full mb-4 bg-lime-600 border-none' to='/dashboard/addProduct'>Add A Product</Link></li>
-                                <li><Link className='btn w-full mb-4 bg-lime-600 border-none' to='/dashboard/myProducts'>My Products</Link></li>
+                                {/* <li><Link className='btn w-full mb-4 bg-lime-600 border-none' to='/dashboard/addProduct'>Add A Product</Link></li>
+                                <li><Link className='btn w-full mb-4 bg-lime-600 border-none' to='/dashboard/myProducts'>My Products</Link></li> */}
                             </>
                         }
 

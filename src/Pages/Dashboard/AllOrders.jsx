@@ -53,7 +53,7 @@ const AllOrders = () => {
 
     return (
         <section className="bg-gray-100 text-gray-800 ">
-            <h3 className="text-3xl p-6">All Buyers</h3>
+            <h3 className="text-3xl p-6">All Orders</h3>
             <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
                 <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
                     {
@@ -72,7 +72,7 @@ const AllOrders = () => {
                                             </Link>
                                         }
                                         {
-                                            order.price && order.paid && <span className='btn bg-lime-600 border-none disabled text-white'
+                                            order.price && order.paid && <span className='btn bg-gray-400 border-none disabled text-white'
                                             >Paid</span>
                                         }
                                         <p>

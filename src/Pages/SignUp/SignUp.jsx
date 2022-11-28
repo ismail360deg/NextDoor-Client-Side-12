@@ -34,7 +34,7 @@ const SignUp = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        saveUser(data.name, data.email,);
+                        saveUser(data.name, data.email);
                     })
                     .catch(err => console.error(err));
 
@@ -135,25 +135,14 @@ const SignUp = () => {
 
                             {/* pattern: { value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/, message: 'Password must have uppercase, number and special characters' } */}
 
-                            {/* <div className="form-control">
-                                <label className="label cursor-pointer">
-                                    <span className="label-text text-white text-sm">Seller</span>
-                                    <input {...register("radio", {
-                                        required: "Checked value required"
-                                    })}
-                                        type="radio" name="radio-10" className="radio text-white checked:bg-lime-600" checked />
-                                </label>
+                            <div className="form-control w-full max-w-xs">
+                                <label className="label"> <span className="label-text">Condition</span></label>
+                                <select
+                                    className="select input-bordered w-full max-w-xs">
+                                    <option>user</option>
+                                    <option>seller</option>
+                                </select>
                             </div>
-
-                            <div className="form-control">
-                                <label className="label cursor-pointer">
-                                    <span className="label-text text-white text-sm">User</span>
-                                    <input {...register("radio", {
-                                        required: "Checked value required"
-                                    })}
-                                        type="radio" name="radio-10" className="radio text-white checked:bg-lime-600" checked />
-                                </label>
-                            </div> */}
 
 
                             <input className='btn w-full bg-lime-600 mt-4' value='Sign Up' type="submit" />

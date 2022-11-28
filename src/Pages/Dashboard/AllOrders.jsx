@@ -72,7 +72,7 @@ const AllOrders = () => {
                                             </Link>
                                         }
                                         {
-                                            order.price && order.paid && <span className='btn bg-lime-600 border-none text-white'
+                                            order.price && order.paid && <span className='btn bg-lime-600 border-none disabled text-white'
                                             >Paid</span>
                                         }
                                         <p>

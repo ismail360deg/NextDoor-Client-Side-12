@@ -1,8 +1,10 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CheckoutForm = ({ orders }) => {
     const [cardError, setCardError] = useState('');
+    const navigate = useNavigate();
 
     const [success, setSuccess] = useState('');
     const [processing, setProcessing] = useState(false);
@@ -12,6 +14,7 @@ const CheckoutForm = ({ orders }) => {
     const stripe = useStripe();
     const elements = useElements();
     const { price, email, Name, _id } = orders;
+    console.log(orders);
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
@@ -102,6 +105,7 @@ const CheckoutForm = ({ orders }) => {
                     if (data.insertedId) {
                         setSuccess('Congrats! your payment completed');
                         setTransactionId(paymentIntent.id);
+                        navigate('/dashboard')
                     }
                 });
         }

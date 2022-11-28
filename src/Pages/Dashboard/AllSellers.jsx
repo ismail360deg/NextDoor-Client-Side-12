@@ -69,7 +69,7 @@ const AllSellers = () => {
                                     <h3 className="text-2xl font-semibold ">Name: {user.name}</h3>
                                     <p>Email: {user.email}</p>
                                     <div className='flex mt-4'>
-
+                                        {user?.role !== 'admin' && <button onClick={() => handleMakeAdmin(user._id)} className='btn btn-xs bg-lime-600 border-none ml-4'>Verify</button>}
                                         <p>
 
                                             <label onClick={() => setDeletingUser(user)}
@@ -99,5 +99,3 @@ const AllSellers = () => {
 };
 
 export default AllSellers;
-
-// {user?.role !== 'admin' && <button onClick={() => handleMakeAdmin(user._id)} className='btn btn-xs bg-lime-600 border-none ml-4'>Make Admin</button>}

@@ -17,8 +17,3 @@
 09.React hook form: https://react-hook-form.com/
 
 10. React Query: https://tanstack.com/query/v4/?from=reactQueryV3&original=https://react-query-v3.tanstack.com/
-
-
-adminEmail: ema@fg.com
-
-adminPassword: 123456
